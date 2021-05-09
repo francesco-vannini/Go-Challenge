@@ -16,14 +16,18 @@ The installation will have to be automated using *Terraform* on both platforms (
 ### Linux - AWS
 [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started)
 In order to install terraform from HashiCorp the repo release has to be set to an Ubuntu one
+
 `deb [arch=amd64] https://apt.releases.hashicorp.com focal main`
+
 So it is _focal_ instead of _ulyssa_
 
 [Install docker (Mint 20)](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/)
 
 [Instal AWS CLI (Docker)](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-docker.html)
 Which you will then invoke as
+
 `docker run --rm -it amazon/aws-cli command`
+
 `docker run --rm -it -v ~/.aws:/root/.aws amazon/aws-cli s3 ls`
 
 Make it practical to call
@@ -33,9 +37,12 @@ The second includes the credentials mapped to the docker container from the host
 
 ### Linux - Azure
 [Install AZ CLI (Docker)](https://docs.microsoft.com/en-us/cli/azure/run-azure-cli-docker)
+
 `docker run -it mcr.microsoft.com/azure-cli`
+
 `alias az='docker run -it mcr.microsoft.com/azure-cli'`
 Terraform provider is not found in path. Moving to install a local CLI
+
 `sudo apt install azure-cli`
 
 ### Windows - Azure
